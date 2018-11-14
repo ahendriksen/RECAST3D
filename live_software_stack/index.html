@@ -489,8 +489,8 @@ TomoPackets, and that can be sent as input to SliceRecon.</p>
 <ul>
 <li><a href="https://cicwi.github.io/TomoPackets/overview.html#pipeline">TomoPackets#Pipeline</a>
   for an overview of the pipeline.</li>
-<li><a href="https://cicwi.github.io/SliceRecon/usage.html">SliceRecon#Usage</a> see
-  SliceRecon for examples of adapters.</li>
+<li><a href="https://cicwi.github.io/TomoPackets/usage.html#writing-an-adapter">TomoPackets#Usage</a>
+  for documentation on writing an adapter.</li>
 </ul>
 <h2 id="detailed-installation-instructions">Detailed installation instructions</h2>
 <p>For convenience, we will describe in detail how to install all the different
@@ -559,12 +559,12 @@ git clone https://github.com/cicwi/SliceRecon.git/
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The software requires a development version of the ASTRA toolbox,
-that was not yet available publically on 2018-11-13. These changes are
-intended to be released in ASTRA v1.9.</p>
+available from <a href="https://github.com/astra-toolbox/astra-toolbox">the ASTRA repository on github</a>.
+The required functionality will be released in ASTRA v1.9.</p>
 </div>
 <p>First, we have to install the <a href="http://www.astra-toolbox.com/">ASTRA toolbox</a>. We
 need ASTRA with CUDA support, and install it in such a way so that <code>pkg-config</code>
-is able to find the library. See the ASTRA documentation for details.</p>
+is able to find the library. See the ASTRA documentation for details on installing ASTRA as a C++ library.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On CI CWI workstations, you can use the module system: <code>module load libastra/git</code>.</p>
@@ -611,13 +611,13 @@ pip install -e .
 <p><em>Pushing data into SliceRecon</em>. The server is unable to reconstruct anything
    interesting, because it has received no data yet. To push some example data
    into SliceRecon, run the following (from the same folder as before):</p>
-<div class="codehilite"><pre><span></span>./example/slicerecon_push_tomos --parallel This will send very poor
+<div class="codehilite"><pre><span></span>./example/slicerecon_push_tomos --parallel
 </pre></div>
 
 
-<p>quality and low-resolution projection data of a Shepp&ndash;Logan phantom to the
-   server, but you should be able to see some reconstructions in the RECAST3D
-   software.</p>
+<p>This will send very poor quality and low-resolution projection data of a
+   Shepp&ndash;Logan phantom to the server, but you should be able to see some
+   reconstructions in the RECAST3D software.</p>
 </li>
 </ol>
 <h3 id="3-optional-installing-tomopackets">3. (optional) Installing TomoPackets</h3>
