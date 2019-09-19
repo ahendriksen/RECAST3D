@@ -21,14 +21,12 @@ cmake ..					\
       -DCMAKE_BUILD_TYPE=Release		\
       ${CMAKE_PLATFORM_FLAGS[@]}		\
       -DOpenGL_GL_PREFERENCE="LEGACY"           \
+      -DGLFW_BUILD_EXAMPLES=OFF			\
+      -DGLFW_BUILD_TESTS=OFF			\
+      -DGLFW_BUILD_DOCS=OFF			\
       -Dglm_DIR="ext/glm/build"
 
-      # -DGLFW_BUILD_EXAMPLES=OFF			\
-      # -DGLFW_BUILD_TESTS=OFF			\
-      # -DGLFW_BUILD_DOCS=OFF			\
 
 
 make -j $CPU_COUNT VERBOSE=1
-
-# Install binary
-install -m 755 recast3d $PREFIX/bin/
+make install

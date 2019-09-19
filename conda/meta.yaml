@@ -8,7 +8,7 @@ source:
   git_tag: conda-packaging
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -29,7 +29,6 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('mesa-libegl-devel') }}     # [linux]
     - {{ cdt('mesa-dri-drivers') }}      # [linux]
-
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libx11-devel') }}          # [linux]
     - {{ cdt('libxext-devel') }}         # [linux]
@@ -53,17 +52,12 @@ requirements:
     - eigen
     - pybind11
     - libxcb                             # [linux]
-    - assimp
-    - glfw
-    # - glm                       # header only
+    - zlib
   run:
     - zeromq
     - eigen
     - libxcb                             # [linux]
-    - xorg-libxrandr         # [linux]
-    - xorg-libxcursor        # [linux]
-    - glfw
-    - assimp
+    - zlib
 
 test:
   commands:
