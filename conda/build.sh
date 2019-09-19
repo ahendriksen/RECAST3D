@@ -20,12 +20,13 @@ cmake ..					\
       -DCMAKE_INSTALL_LIBDIR=$PREFIX/lib	\
       -DCMAKE_BUILD_TYPE=Release		\
       ${CMAKE_PLATFORM_FLAGS[@]}		\
-      -DOpenGL_GL_PREFERENCE="LEGACY"
+      -DOpenGL_GL_PREFERENCE="LEGACY"           \
+      -Dglm_DIR="ext/glm/build"
 
       # -DGLFW_BUILD_EXAMPLES=OFF			\
       # -DGLFW_BUILD_TESTS=OFF			\
       # -DGLFW_BUILD_DOCS=OFF			\
-      # -Dglm_DIR="ext/glm/build"
+
 
 make -j $CPU_COUNT VERBOSE=1
 
