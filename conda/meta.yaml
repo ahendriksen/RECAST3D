@@ -44,8 +44,6 @@ requirements:
     - {{ cdt('libxfixes') }}             # [linux]
     - {{ cdt('libxfixes-devel') }}       # [linux]
     - {{ cdt('libxxf86vm') }}            # [linux]
-
-    # - {{ cdt('') }}
     - pkg-config                # [unix]
     - cmake
     - make
@@ -66,6 +64,11 @@ requirements:
     - xorg-libxcursor        # [linux]
     - glfw
     - assimp
+
+test:
+  commands:
+    # Verify git location.
+    - test -f $PREFIX/bin/recast3d       # [unix]
 
 
 about:

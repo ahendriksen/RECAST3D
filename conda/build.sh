@@ -28,3 +28,6 @@ cmake ..					\
       # -Dglm_DIR="ext/glm/build"
 
 make -j $CPU_COUNT VERBOSE=1
+
+# Install binary
+install -m 755 recast3d $PREFIX/bin/
