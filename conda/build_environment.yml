@@ -1,0 +1,18 @@
+name: recast
+channels:
+- defaults
+- conda-forge
+- anaconda
+dependencies:
+- assimp
+- boost-cpp
+- cmake
+- eigen
+- glfw
+- glm
+- gxx_linux-64
+- make
+- pybind11
+- python=3.7
+- zeromq
+- mesa-libgl-devel-cos6-x86_64  # opengl libs/headers
